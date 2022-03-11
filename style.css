@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: url(images/background1.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: rgb(13, 109, 116);
+  background-blend-mode:multiply;
+}
+
+body {
+  margin: 70px;
+  display: flex;
+  justify-content: center;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+.leaderboard__card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(199, 186, 89);
+  border-radius: 12px;
+  box-shadow: 0.4rem 0.4rem 0.2rem rgba(47, 33, 12, 0.2);
+  height: 60rem;
+  width: 60rem;
+  border: 16px rgb(150, 129, 62);
+  border-style: solid;
+  overflow: auto;
+}
+.leaderboard__card:hover {
+  box-shadow: 8px 20px 50px rgb(4, 20, 63);
+}
+
+.leaderboard__screen {
+  border: 8px rgb(18, 23, 53);
+  border-style: solid;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: rgb(72, 211, 211);
+  width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 2px;
+  animation: screen-blink 3s steps(3, start) infinite;
+}
+@keyframes screen-blink {
+  0% {
+    background-color: rgb(113, 177, 218);
+  }
+}
+.leaderboard__screen:hover {
+  background-color: rgb(113, 177, 218);
+}
+
+.leaderboard__card h1 {
+  font-weight: 500;
+  text-align: left;
+  margin-top: 0px;
+  color: rgb(242, 243, 243);
+  font-size: 26px;
+  line-height: 32px;
+}
+
+mark {
+  background-color: rgb(90, 161, 207);
+  color: rgb(242, 243, 243);
+}
+
+.leaderboard__card h1::after {
+  content: "";
+  width: 24px;
+  height: 8px;
+  position: relative;
+  left: -24px;
+  background: #2a8588;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.button__container {
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+.button__container > * {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.left {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid rgb(158, 139, 33);
+  border-bottom: 25px solid transparent;
+}
+button.center {
+  width: 140px;
+  height: 50px;
+  background: rgb(158, 139, 33);
+  border-radius: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Press Start 2P", sans-serif;
+}
+button.center:hover {
+  background-color: #4e3d0f;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+.right {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid rgb(158, 139, 33);
+  border-bottom: 25px solid transparent;
+}
+
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+  font-size: 0.9em;
+  width: 600px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+table thead tr {
+  background-color: rgb(121, 113, 56);
+  color: #fff;
+  font-weight: 100;
+}
+
+table th{
+  background: rgb(158, 139, 33);
+  color:#fff;
+  font-weight: 100;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+table tbody {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(94, 78, 27);
+}
+
+table tbody tr:hover {
+  animation: blink-animation 1.5s steps(3, start) infinite;
+  -webkit-animation: blink-animation 1.5s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    background-color: rgb(192, 127, 42);
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.sensor__container {
+  display: flex;
+  justify-content: center;
+  column-gap: 40px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.sensor__container > * {
+  display: inline-block;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: rgb(158, 139, 33);
+  border: 4px rgb(41, 38, 12);
+  border-radius: 50%;
+}
+
+.sensor1:hover {
+  background: rgb(54, 158, 33);
+}
+.sensor2:hover {
+  background: rgb(215, 218, 58);
+}
+.sensor3:hover {
+  background: rgb(158, 33, 33);
+}
+.sensor4:hover {
+  background: rgb(35, 33, 158);
+}
+
+button.sensor__button {
+  cursor: pointer;
+  width: 140px;
+  height: 50px;
+  background: rgb(173, 154, 46);
+  border-radius: 50px;
+  text-align: center;
+  line-height: 46px;
+  color: #fff;
+  font-size: 13px;
+  margin: auto;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+button.sensor__button:hover {
+  background-color: #4e3d0f;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
